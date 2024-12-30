@@ -1,0 +1,17 @@
+<div class="vh-100 main-container">
+    <h1>Elevate Your Language Skills</h1>
+    <p>Select the course that aligns with your current proficiency—Basic, Intermediate, or Advanced.</p>
+    <div class="levels-container">
+        <div class="nivel-card" *ngFor="let level of levels">
+            <!-- Ícono Feather. El valor de data-feather vendrá del JSON -->
+            
+
+            <h2><i [class]="'feather icon-' + level.icon"></i>{{ level.title }}</h2>
+            <p>{{ level.description }}</p>
+
+            <button [routerLink]="'path/' + level?.redirect">
+                Seleccionar
+            </button>
+        </div>
+    </div>
+</div>

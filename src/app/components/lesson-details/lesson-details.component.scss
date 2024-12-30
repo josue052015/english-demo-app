@@ -1,0 +1,45 @@
+.exercise-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #f8f9fa; /* Gris claro de Bootstrap */
+    border-radius: 8px;
+    padding: 30px;
+  }
+
+  .question-header {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .question-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .answer-area {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .answer-area input {
+    max-width: 150px;
+  }
+
+  .profile-image {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .hint-text {
+    letter-spacing: 0.3rem; 
+    font-weight: 500;
+  }
+
+  .start-btn {
+    margin-bottom: 1rem;
+  }

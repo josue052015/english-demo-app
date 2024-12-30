@@ -1,0 +1,17 @@
+<div class="main-container">
+    <h1 class="roadmap-title">Learning Path Roadmap</h1>
+        <p class="roadmap-subtitle">Progress through each lesson step-by-step to master the fundamentals.</p>
+    <div class="roadmap-container">
+        <div class="roadmap-container">
+            <div class="line"></div>
+            <div class="roadmap-step" *ngFor="let item of roadmap?.modules; let i = index">
+                <div class="tile-stack" (click)="goToModule(item?.id)" [routerLink]="'module/' + item?.id">
+                    <div class="tile-base"></div>
+                    <div class="tile-middle"></div>
+                    <div class="tile-top"><span>{{i + 1}}</span></div>
+                </div>
+                <h3>{{item?.title}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
