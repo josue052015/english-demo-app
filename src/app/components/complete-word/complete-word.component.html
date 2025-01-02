@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-success text-white">
+      <h3 class="mb-0">Exercise: Complete the Word</h3>
+    </div>
+    <div class="card-body">
+      <p>
+        {{exerciseInfo?.phrase}}:
+      </p>
+      <div class="mb-3">
+        <input type="text" [disabled]="exerciseInfo?.status == exerciseStatus.success" class="form-control" [(ngModel)]="answer" placeholder="Enter missing letters" />
+      </div>
+      <button class="btn btn-primary" *ngIf="exerciseInfo?.status !== exerciseStatus.success"
+        (click)="checkExercise()" [disabled]="!answer">Check</button>
+      <button class="btn btn-primary" *ngIf="exerciseInfo?.status == exerciseStatus.success"
+        (click)="nextExercise()">
+      <span *ngIf="pagination?.currentNumber !== pagination?.totalExercises">Next</span>
+      <span *ngIf="pagination?.currentNumber == pagination?.totalExercises">Complete Module</span>
+      </button>
+
+      <div *ngIf="exerciseInfo?.status !== exerciseStatus.uncorrected" class="alert mt-3" [ngClass]="{'alert-success': exerciseInfo?.status == exerciseStatus.success,
+          'alert-danger': exerciseInfo?.status == exerciseStatus.error}">
+        {{message}}
+      </div>
+    </div>
+  </div>
+</div>

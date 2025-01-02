@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-danger text-white">
+        <h3 class="mb-0">Exercise: Talk to the App</h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Press the microphone button and say:
+          <strong>"Hello, I am learning English."</strong>
+        </p>
+        <div class="d-flex align-items-center">
+          <button 
+            class="btn btn-lg btn-outline-secondary me-3" 
+            
+          >
+            <i class="ti ti-microphone"></i>
+            <!-- Bootstrap Icons or FontAwesome for the microphone icon -->
+          </button>
+          <span class="fw-bold">Listening Status:</span>
+          <span class="ms-2">{{ true ? 'Recording...' : 'Not recording' }}</span>
+        </div>
+  
+        <div class="alert alert-info mt-3" >
+          <strong>Your speech transcript:</strong> lorem
+        </div>
+      </div>
+    </div>
+  </div>
+  

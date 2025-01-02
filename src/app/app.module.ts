@@ -7,6 +7,12 @@ import { LessonsMapComponent } from './components/lessons-map/lessons-map.compon
 import { LessonDetailsComponent } from './components/lesson-details/lesson-details.component';
 import { LevelsListComponent } from './components/levels-list/levels-list.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SelectWordComponent } from './components/select-word/select-word.component';
+import { CompleteWordComponent } from './components/complete-word/complete-word.component';
+import { RepeatComponent } from './components/repeat/repeat.component';
+import { TalkComponent } from './components/talk/talk.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +20,18 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     LessonsMapComponent,
     LessonDetailsComponent,
     LevelsListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SelectWordComponent,
+    CompleteWordComponent,
+    RepeatComponent,
+    TalkComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

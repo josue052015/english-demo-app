@@ -18,8 +18,10 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@tabler/icons-webfont": "^3.26.0",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.5.0",
+    "tabler-icons": "^1.35.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

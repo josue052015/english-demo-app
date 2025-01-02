@@ -35,10 +35,16 @@ export const basicEnglishRoadmap: IRoadmap = {
         title: "Introducing Yourself",
         exercises: [
           {
+            id: "4fede694-baf9-4f66-876c-2e98eac05efc",
+            exerciseType: "repeat",
+            phrase: "Read and repeat and think",
+            correctAnswer: "Read and repeat and think",
+          },
+          {
             id: "00fbfae0-c68b-47ac-ba7d-787b4bf92c8b",
             exerciseType: "complete",
-            phrase: "I am from ___",
-            correctAnswer: "country or city name",
+            phrase: "Hello, nice to meet y__",
+            correctAnswer: "ou",
           },
           {
             id: "4e58d3e5-a74d-4218-bd63-1c1bb32b3175",
@@ -46,13 +52,9 @@ export const basicEnglishRoadmap: IRoadmap = {
             phrase:
               "Select the best word to complete the sentence: I ___ 25 years old.",
             correctAnswer: "am",
+            options: ["am", "are", "the", "two"]
           },
-          {
-            id: "4fede694-baf9-4f66-876c-2e98eac05efc",
-            exerciseType: "voice",
-            phrase: "Say: 'I live in New York.'",
-            correctAnswer: "I live in New York.",
-          },
+          
         ],
       },
       {

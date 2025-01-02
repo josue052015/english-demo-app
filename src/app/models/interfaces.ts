@@ -1,3 +1,5 @@
+import { ExerciseStatus } from "../enums/exerciseStatus.enum";
+
 export interface ILevels {
     id: number;
     title: string;
@@ -25,4 +27,11 @@ export interface IExercise {
     exerciseType: ExerciseType;
     phrase: string;
     correctAnswer: string;
+    options?: any[]
+    status?: ExerciseStatus
+}
+
+export interface IExercisePagination{
+    currentNumber: number;
+    totalExercises: number;
 }

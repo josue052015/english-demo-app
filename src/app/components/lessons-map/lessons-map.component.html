@@ -5,7 +5,7 @@
         <div class="roadmap-container">
             <div class="line"></div>
             <div class="roadmap-step" *ngFor="let item of roadmap?.modules; let i = index">
-                <div class="tile-stack" (click)="goToModule(item?.id)" [routerLink]="'module/' + item?.id">
+                <div class="tile-stack" (click)="goToModule(item?.id)">
                     <div class="tile-base"></div>
                     <div class="tile-middle"></div>
                     <div class="tile-top"><span>{{i + 1}}</span></div>

@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-warning">
+      <h3 class="mb-0">Exercise: Repeat</h3>
+    </div>
+    <div class="card-body">
+      <p>
+        Read and repeat the following sentence:
+      </p>
+      <blockquote class="blockquote">
+        <p class="mb-0 fs-5">
+          <!-- {{exerciseInfo.phrase}} -->
+          <span *ngFor="let word of phraseWords" style="margin-right: 4px;cursor: pointer;" (click)="repeatWord(word)"
+            [ngClass]="{'text-success': !word?.isMisspelled  &&  exerciseInfo?.status !== exerciseStatus.uncorrected, 
+            'text-danger': word?.isMisspelled && exerciseInfo?.status !== exerciseStatus.success}">{{word?.word}}</span>
+        </p>
+      </blockquote>
+
+      <button class="btn btn-primary" *ngIf="exerciseInfo?.status !== exerciseStatus.success"
+        (click)="toggleListening()">
+        <span *ngIf="!recordStarted">Record</span>
+        <span *ngIf="recordStarted">Stop Recording</span>
+      </button>
+      <button class="btn btn-primary" (click)="nextExercise()" *ngIf="exerciseInfo?.status == exerciseStatus.success">
+        Next
+      </button>
+      <div class="alert mt-3" [ngClass]="{'alert-success': exerciseInfo?.status == exerciseStatus.success,
+        'alert-danger': exerciseInfo?.status == exerciseStatus.error}">
+        {{message}}
+      </div>
+    </div>
+  </div>
+</div>

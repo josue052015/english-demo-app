@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h3 class="mb-0">Exercise: Select the Word</h3>
+    </div>
+    <div class="card-body">
+      <p>
+      {{exerciseInfo?.phrase}}
+      </p>
+
+      <div class="row g-2">
+        <div class="col-sm-6 col-md-3" *ngFor="let option of exerciseInfo?.options; let i = index">
+          <button class="btn  w-100" [ngClass]="answer == option ? 'btn-primary' : 'btn-outline-primary'" (click)="setAnswer(option)">
+            {{ option }}
+          </button>
+        </div>
+      </div>
+      <button class="btn btn-primary mt-3" *ngIf="exerciseInfo?.status !== exerciseStatus.success" (click)="checkExercise()"
+        [disabled]="!answer">Check</button>
+      <button class="btn btn-primary mt-3" *ngIf="exerciseInfo?.status == exerciseStatus.success" (click)="nextExercise()">
+        <span *ngIf="pagination?.currentNumber !== pagination?.totalExercises">Next</span>
+        <span *ngIf="pagination?.currentNumber == pagination?.totalExercises">Complete Module</span>
+      </button>
+
+      <div *ngIf="exerciseInfo?.status !== exerciseStatus.uncorrected" class="alert mt-3" [ngClass]="{'alert-success': exerciseInfo?.status == exerciseStatus.success,
+        'alert-danger': exerciseInfo?.status == exerciseStatus.error}">
+        {{message}}
+      </div>
+    </div>
+  </div>
+</div>
